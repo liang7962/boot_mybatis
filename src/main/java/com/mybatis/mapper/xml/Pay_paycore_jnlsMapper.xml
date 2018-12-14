@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mybatis.mapper.Pay_paycore_jnlsDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mybatis.entity.Pay_paycore_jnls">
+        <id column="ORG_NO" property="ORG_NO" />
+        <result column="PAY_METHOD" property="PAY_METHOD" />
+        <result column="MERCHANT_NO" property="MERCHANT_NO" />
+        <result column="TERMINAL_NO" property="TERMINAL_NO" />
+        <result column="PAY_NO" property="PAY_NO" />
+        <result column="AMOUNT" property="AMOUNT" />
+        <result column="NOTIFY_URL" property="NOTIFY_URL" />
+        <result column="DESCRIPT" property="DESCRIPT" />
+        <result column="MID" property="MID" />
+        <result column="TMSTAMP" property="TMSTAMP" />
+        <result column="R_TMSTAMP" property="R_TMSTAMP" />
+        <result column="N_TMSTAMP" property="N_TMSTAMP" />
+        <result column="INSTITUTE" property="INSTITUTE" />
+        <result column="PJNL" property="PJNL" />
+        <result column="BJNL" property="BJNL" />
+        <result column="REPLY_CODE" property="REPLY_CODE" />
+        <result column="REPLY_MESSAGE" property="REPLY_MESSAGE" />
+        <result column="TRADE_STATUS" property="TRADE_STATUS" />
+        <result column="REMAIN1" property="REMAIN1" />
+        <result column="REMAIN2" property="REMAIN2" />
+        <result column="REMAIN3" property="REMAIN3" />
+        <result column="REQUEST_DATE" property="REQUEST_DATE" />
+        <result column="REQUEST_TIME" property="REQUEST_TIME" />
+        <result column="RESPONSE_DATE" property="RESPONSE_DATE" />
+        <result column="RESPONSE_TIME" property="RESPONSE_TIME" />
+        <result column="FLAG" property="FLAG" />
+        <result column="CHANNEL" property="CHANNEL" />
+        <result column="ORIG_PJNL" property="ORIG_PJNL" />
+    </resultMap>
+
+</mapper>
