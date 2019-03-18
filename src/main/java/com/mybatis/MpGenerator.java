@@ -26,7 +26,8 @@ public class MpGenerator {
         // 全局配置
         GlobalConfig gc = new GlobalConfig();
         gc.setAuthor("Liang");
-        gc.setOutputDir("C://qt/boot_mybatis/src/main/java");
+        gc.setOutputDir("C://java/boot_mybatis/src/main/java");
+//        gc.setOutputDir("C://生成代码/my");
         gc.setFileOverride(false);// 是否覆盖同名文件，默认是false
         gc.setActiveRecord(true);// 不需要ActiveRecord特性的请改为false
         gc.setEnableCache(false);// XML 二级缓存
@@ -48,14 +49,15 @@ public class MpGenerator {
             @Override
             public DbColumnType processTypeConvert(String fieldType) {
                 System.out.println("转换类型：" + fieldType);
+
                 // 注意！！processTypeConvert 存在默认类型转换，如果不是你要的效果请自定义返回、非如下直接返回。
                 return super.processTypeConvert(fieldType);
             }
         });
         dsc.setDriverName("com.mysql.jdbc.Driver");
         dsc.setUsername("root");
-        dsc.setPassword("root");
-        dsc.setUrl("jdbc:mysql://127.0.0.1:3306/test?autoReconnect=true&useUnicode=true&characterEncoding=utf8&slowQueryThresholdMillis=0&logSlowQueries=false");
+        dsc.setPassword("liang");
+        dsc.setUrl("jdbc:mysql://127.0.0.1:3306/less?autoReconnect=true&useUnicode=true&characterEncoding=utf8&slowQueryThresholdMillis=0&logSlowQueries=false");
         mpg.setDataSource(dsc);
 
         // 策略配置
@@ -87,7 +89,7 @@ public class MpGenerator {
 
         // 包配置
         PackageConfig pc = new PackageConfig();
-        pc.setParent("com.mybatis");
+        pc.setParent("com.mybatis.generator");
         // pc.setModuleName("test");
         mpg.setPackageInfo(pc);
 
