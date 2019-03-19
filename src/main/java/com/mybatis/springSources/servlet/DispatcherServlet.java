@@ -47,11 +47,12 @@ public class DispatcherServlet extends HttpServlet {
     public void init(ServletConfig config) throws ServletException {
         //扫码所有的bean，
         scanPackage("com.mybatis.springSources");
+
         doInstace();//创建beans
         
         doIoc();//beans依赖注入
 
-        buildUrlMapping();
+        buildUrlMapping();//url匹配
 
 //        super.init(config);
     }

@@ -1,0 +1,10 @@
+hash值怎么计算出来的：
+1，得到hashCode值
+2，hash=(hashcode)^(hashcode>>16)
+
+元素数组下标（index）计算
+(16-1)&hash=hash%16
+
+hash冲突
+不同对象的hash值算出的数组下标index有可能相同
+使用链表解决hash冲突，加入一个next记录下一个节点
